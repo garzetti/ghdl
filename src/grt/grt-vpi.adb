@@ -756,6 +756,12 @@ package body Grt.Vpi is
          when vpiType =>
             Tmpstring2 (1 .. 4) := "???" & NUL;
             return To_Ghdl_C_String (Tmpstring2'Address);
+         when vpiDefName =>
+            Tmpstring2 (1 .. 4) := "???" & NUL;
+            return To_Ghdl_C_String (Tmpstring2'Address);
+         when vpiDefFile =>
+            Tmpstring2 (1 .. 4) := "???" & NUL;
+            return To_Ghdl_C_String (Tmpstring2'Address);
          when others =>
             dbgPut_Line ("vpi_get_str: unhandled property");
             return null;
